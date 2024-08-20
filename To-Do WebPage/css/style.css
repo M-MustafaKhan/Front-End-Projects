@@ -1,0 +1,124 @@
+*{
+    background-color: rgb(0,0,0,0.75);
+    color: ivory;
+    padding: 0;
+    margin: 0;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header h1{
+    margin: 1rem;
+    font-size: 2.5rem;
+}
+header h1 span{
+    font-size: 3.5rem;
+    color: red;
+    font-weight: 600;
+    text-decoration: underline;
+}
+header h2{
+    margin: 1rem;
+    font-size: 2rem;
+}
+header h2 span{
+    font-size: 3rem;
+    color: red;
+    font-weight: 600;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+header h3{
+    font-size: 1.5rem;
+    color: bisque;
+    margin: 0.75rem;
+    text-align: center;
+    line-height: 1.75rem;
+}
+header hr{
+    border-color: red;
+    margin-top: 1rem;
+    height: 0.25rem;
+    width: 100%;
+}
+
+.add{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+#add_title h2{
+    color: red;
+    margin: 1.25rem;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 700;
+}
+#add_title span{
+    text-transform: uppercase;
+}
+#add_input{
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+#add_input input{
+    height: 1.35rem;
+    width: 25rem;
+    background-color: white;
+    font-weight: 800;
+    color: black;
+    padding-left: 0.25rem;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+    text-transform: capitalize;
+}
+#description_input textarea{
+    background-color: aliceblue;
+    color: black;
+}
+.add hr{
+    border-color: red;
+    margin-top: 1rem;
+    height: 0.25rem;
+    width: 100%;
+}
+#time_input{
+    margin: 0.75rem;
+    line-height: 1.25rem;
+}
+#time_input input{
+    width: 5rem;
+    background-color: aliceblue;
+    color: black;
+}
+#time_input h4 span{
+    color: red;
+    font-size: larger;
+}
+#date_input{
+    margin: 0.75rem;
+    line-height: 1.25rem;
+}
+#date_input input{
+    width: 5rem;
+    background-color: aliceblue;
+    color: black;
+}
+#date_input h4 span{
+    color: red;
+    font-size: larger;
+}
+#add_button{
+    background-color: orange ;
+    color: black;
+    font-weight: 900;
+    width: 7rem;
+    height: 1.5rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+  
+}
