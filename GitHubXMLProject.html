@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHTTPRequest</title>
+</head>
+
+<body>
+    <h1>XML Practice code</h1>
+    <br>
+    <h3>Enter a github profile name to get its bio and pfp!</h3>
+    <form>
+        <input type="text" id="name">
+        <button id="button">submit</button>
+    </form>
+    <br>
+    <hr>
+    <div class="image"></div>
+    <br>
+    <div class="bio"></div>
+
+</body>
+<script>
+    let image = document.querySelector(".image");
+    let bio = document.querySelector(".bio");
+    let name = document.querySelector("#name");
+    let button = document.querySelector("#button");
+
+
+
+    function print(gitImage, gitBio) {
+        image.innerHTML = `
+            <img src='${gitImage}' alt = Git Image>
+        `
+        bio.innerHTML = `
+           ${gitBio}
+        `
+    }
+
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        let userName = name.value;
+        console.log(userName)
+        const url = `https://api.github.com/users/${userName}`;
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', url);
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                const data = JSON.parse(xhr.responseText);
+                print(data.avatar_url, data.bio);
+            }
+        }
+    })
+
+</script>
+
+</html>
